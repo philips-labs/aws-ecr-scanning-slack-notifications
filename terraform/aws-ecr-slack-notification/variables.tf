@@ -1,7 +1,6 @@
 variable "region" {
   type        = string
   description = "AWS Region"
-  default     = "eu-west-1"
 }
 
 variable "lambda_version" {
@@ -37,20 +36,20 @@ variable "provider_assume_role" {
 }
 
 variable "namespace" {
-  type = string
+  type        = string
   description = "The namespace the infrastructure will be deployed to"
-  default = "default"
+  default     = "default"
 }
 
 variable "s3_bucket_name" {
-  type = string
+  type        = string
   description = "The s3 bucket to hold the ecr-repositories.json file"
 }
 
 variable "dynamodb_table" {
-  type = string
+  type        = string
   description = "Table name to store the detected vulnerabilities"
-  default = "docker-images-vulnerabilities"
+  default     = "docker-images-vulnerabilities"
 }
 
 

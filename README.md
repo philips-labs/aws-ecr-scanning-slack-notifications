@@ -23,7 +23,7 @@ The diagram below illustrates how it works.
 
 ## Configure a Slack App to receive notifications
 
-If you don't yet have a Slack App configured, you can learn how to create one by checking the official [docs](https://api.slack.com/start)
+If you don't yet have a Slack App configured, you can learn how to create one by checking the official [docs](https://api.slack.com/start). Once you have a slack app, enable the webhook to post messages on a specific channel.
 
 ## Define repositories to Scan
 
@@ -38,7 +38,7 @@ _All the following commands assume you are in the root of the project_
 Deployment happens via `terraform`, but you need to generate a .zip file containing the code for the Lambda functions and drop it inside the terraform namespace you are deploying. Terraform will then push this artifact to S3 during deployment.
 
 ```bash
-./build-scripts/lambda_package.sh ./src terraform/namespaces/default 1.0.0
+./build-scripts/lambda_package.sh ./src terraform 1.0.0
 ```
 We can finally trigger the deployment with:
 
