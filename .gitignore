@@ -1,0 +1,10 @@
+*node_modules/
+.idea
+.vscode
+.envrc
+*.tfstate*
+output/
+*.terraform
+terraform.tfvars
+.DS_Store
+*.zip
